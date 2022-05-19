@@ -1,0 +1,48 @@
+.header-container {
+  width: 1440px;
+  margin: 0 auto;
+  padding-left: 170px;
+  padding-right: 170px;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-list__logo {
+  margin-right: auto;
+}
+
+.header-logo {
+  display: block;
+  width: 111px;
+  height: 34px;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 330px;
+  margin: 0;
+  margin-right: 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.button-hireus {
+  width: 158px;
+  min-height: 52px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #796FF1;
+}
