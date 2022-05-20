@@ -77,7 +77,9 @@ const Header = () => {
                 <CompanyMenu isOpen={isCompanyOpen} />
               </li>
             </ul>
-            <button className="button-hireus" type="button">Hire us</button>
+            <div className="button-hireus-wrapper">
+              <button className="button-hireus" type="button">Hire us</button>
+            </div>
             <div className="language-wrapper">
               <Select
                 labelId="language"
