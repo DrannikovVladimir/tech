@@ -1,0 +1,232 @@
+.main {
+  position: relative;
+  overflow: hidden;
+  background-image: url('../../../../assets/image/chart.png'),
+    url('../../../../assets/image/eth.png'),
+    url('../../../../assets/image/binance.png'),
+    url('../../../../assets/image/bitcoin.png'),
+    url('../../../../assets/image/nft.png'),
+    url('../../../../assets/image/main-bg.png');
+  background-repeat: no-repeat;
+  background-size: 235px 277px, 88px 113px, 88px 113px, 88px 113px, 172px 231px, 500px 435px;
+  background-position: right 141px top 475px, right 57px top 350px, right 163px top 255px, right 33px top 190px, right 309px top 150px, right 0 top 50%;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 160px;
+    left: 42%;
+    width: 40px;
+    height: 40px;
+    background-color: #90BDE7;
+    transform: rotate(45deg) skew(15deg, 15deg);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    left: 8%;
+    width: 40px;
+    height: 40px;
+    background-color: #7F81DC;
+    transform: rotate(45deg) skew(15deg, 15deg);
+  }
+}
+
+.main-container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 250px 170px;
+}
+
+.main-caption {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-weight: 700;
+  color: #c4bfb9;
+  text-transform: uppercase;
+}
+
+.main-bracket__open {
+  color: #F0B270;
+}
+
+.main-bracket__close {
+  color: #796FF1;
+}
+
+.main-title {
+  width: 630px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  font-size: 76px;
+  line-height: 106px;
+  font-weight: 800;
+}
+
+.main-subtitle {
+  width: 520px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  line-height: 24px;
+  color: #2A303D;
+}
+
+.main-button__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 460px;
+}
+
+.main-button__talk {
+  width: 197px;
+  min-height: 48px;
+  padding: 15px 45px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #F0B270;
+  cursor: pointer;
+}
+
+.main-button__projects {
+  position: relative;
+  width: 240px;
+  padding: 7px 12px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #796FF1;
+  cursor: pointer;
+}
+
+.main-button__projects-text {
+  position: relative;
+  display: inline-block;
+  padding-right: 28px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 8px;
+    height: 16px;
+    background-image: url('../../../../assets/icons/arrow-right-purple.svg');
+    background-repeat: no-repeat;
+    background-size: 8px 16px;
+    background-position: center;
+  }
+}
+
+@media (max-width: 1440px) {
+  .main-container {
+    width: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .main-title {
+    width: 400px;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .main-subtitle {
+    width: 400px;
+  }
+}
+
+@media (max-width: 920px) {
+  .main-container {
+    padding-top: 500px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+  }
+
+  .main {
+    background-size: 142px 129px, 88px 113px, 88px 113px, 88px 113px, 112px auto, 500px 435px;
+    background-position: right 25% bottom 300px, right 57px top 350px, right 163px top 255px, right 33px top 190px, right 309px top 250px, right 0 top 30%;
+    &::before {
+      top: 100px;
+      left: 12%;
+    }
+    &::after {
+      top: 270px;
+      left: 20%;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .main {
+    background-size: 142px 169px, 54px 70px, 54px 70px, 54px 70px, 98px 131px, 320px 248px;
+    background-position: right 161px top 210px, right 62px top 260px, right 293px top 110px, right 188px top 35px, right 73px top 50px, right 0 top 100px;
+  }
+  .main {
+    &::before {
+      top: 100px;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+    }
+    &::after {
+      top: 340px;
+      left: 40px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .main-caption {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .main-title {
+    width: auto;
+    margin-bottom: 20px;
+    font-size: 45px;
+    line-height: 63px;
+  }
+  .main-subtitle {
+    width: auto;
+    max-width: 440px;
+  }
+  .main-button__wrapper {
+    width: auto;
+    flex-direction: column;
+  }
+  .main-button__talk {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .main-button__projects {
+    width: 100%;
+    &::before {
+      right: 20%;
+      top: 15px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .main-container {
+    min-width: 320px;
+  }
+  .main-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

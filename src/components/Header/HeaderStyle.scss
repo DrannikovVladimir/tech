@@ -141,9 +141,11 @@
   .header-container {
     padding-left: 0;
     padding-right: 0;
-    height: 100vh;
     min-width: 320px;
-  }  
+  }
+  .header-container--fullscreen {
+    height: 100vh;
+  }
   .header-wrapper {
     flex-direction: column;
     min-height: 100%;

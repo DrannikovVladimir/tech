@@ -51,11 +51,15 @@ const Header = () => {
 
   const classInnerList = cn('menu-list__item menu-list__item-inner', {
     'menu-list__item-inner--no-arrow': isSolutionsOpen,
+  });
+
+  const classHeader = cn('header-container', {
+    'header-container--fullscreen': !isClose,
   })
 
   return (
     <header className="header">
-      <div className="header-container">
+      <div className={classHeader}>
         <div className="header-wrapper">
           <div className="header-logo__wrapper">
             <Link to="/" className="header-logo">
