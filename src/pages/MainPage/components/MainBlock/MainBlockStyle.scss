@@ -1,6 +1,7 @@
 .main {
   position: relative;
   overflow: hidden;
+  margin-bottom: 40px;
   background-image: url('../../../../assets/image/chart.png'),
     url('../../../../assets/image/eth.png'),
     url('../../../../assets/image/binance.png'),
@@ -172,6 +173,7 @@
 
 @media (max-width: 690px) {
   .main {
+    margin-bottom: 0;
     background-size: 142px 169px, 54px 70px, 54px 70px, 54px 70px, 98px 131px, 320px 248px;
     background-position: right 161px top 210px, right 62px top 260px, right 293px top 110px, right 188px top 35px, right 73px top 50px, right 0 top 100px;
   }
