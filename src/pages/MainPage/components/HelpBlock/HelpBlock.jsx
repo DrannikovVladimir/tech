@@ -10,7 +10,7 @@ const HelpBlock = () => {
     <div className="help">
       <div className="help-wrapper">
         <div className="help-container">
-          <h2 className="help-title">What we can help you with</h2>
+          <h2 className="help-title">What We Can Help You With</h2>
           <ul className="help-list">
             <li className="help-list__item">
               <div className="help-list__image-wrapper">
