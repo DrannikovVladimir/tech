@@ -1,0 +1,142 @@
+.techstack {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #F9F9F9;
+}
+
+.techstack-container {
+  display: flex;
+  align-items: center;
+  width: 1440px;
+  margin: 0 auto;
+  padding-right: 170px;
+  padding-left: 170px;
+}
+
+.techkstack-title {
+  margin: 0;
+  margin-right: 150px;
+  padding: 0;
+  font-size: 76px;
+  line-height: 110px;
+  font-weight: 700;
+  color: #2A303D;
+}
+
+.techstack-wrapper {
+  display: flex;
+}
+
+.techstack-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 310px;
+  margin: 0;
+  margin-right: 100px;
+  padding: 0;
+  list-style: none;
+}
+
+.techstack-list__item img {
+  vertical-align: middle;
+}
+
+@media (max-width: 1440px) {
+  .techstack-container {
+    width: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .techkstack-title {
+    margin-right: auto;
+  }
+
+  .techstack-list {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1040px) {
+  .techkstack-title {
+    margin-bottom: 40px;
+    font-size: 58px;
+    line-height: 78px;
+  }
+
+  .techstack-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .techstack-wrapper {
+    width: 100%;
+  }
+
+  .techstack-list {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 630px) {
+  .techstack {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .techstack-container {
+    min-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .techkstack-title {
+    font-size: 45px;
+    line-height: 63px;
+  }
+
+  .techstack-list {
+    width: 150px;
+    flex-wrap: wrap;
+  }
+
+  .techstack-list__item {
+    margin-right: 40px;
+    margin-bottom: 50px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-child(3) {
+      margin-bottom: 0;
+    }
+    &:nth-child(4) {
+      margin-bottom: 0;
+    }
+  }
+
+  .techstack-button__wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .techstack-list {
+    width: 120px;
+  }
+
+  .techstack-list__item {
+    margin-right: 20px;
+    margin-bottom: 30px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-child(3) {
+      margin-bottom: 0;
+    }
+    &:nth-child(4) {
+      margin-bottom: 0;
+    }
+  }
+}
