@@ -1,0 +1,19 @@
+.arrow__icon {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background-color: #F0B270;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    transform: rotate(-45deg);
+  }
+}
