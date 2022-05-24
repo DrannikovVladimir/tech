@@ -1,11 +1,16 @@
 import * as React from 'react';
+import { BrowserRouter as Router } from "react-router-dom";
 import Routes from './routes/routes';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
-    <div>
+    <Router>
+      <Header />
       <Routes />
-    </div>
+      <Footer />
+    </Router>
   );
 }
 

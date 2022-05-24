@@ -1,8 +1,11 @@
 import * as React from 'react';
-import './NewsBlockStyle.scss';
+import _ from 'lodash';
+//icons
 import bgItem from '../../../../assets/icons/news/bg-item.svg';
+//styles
+import './NewsBlockStyle.scss';
 
-const data = [
+const news = [
   { 
     imageSrc: bgItem,
     caption: 'Education',
@@ -28,12 +31,12 @@ const data = [
 
 const NewsBlock = () => {
   return (
-    <div className="news">
+    <section className="news">
       <div className="news-container">
         <h2 className="news-title">Latest News</h2>
         <ul className="news-list">
-          {data.map(({ imageSrc, caption, title, text, date }) => (
-            <li className="news-list__item">
+          {news.map(({ imageSrc, caption, title, text, date }) => (
+            <li key={_.uniqueId('news_')} className="news-list__item">
               <div className="news-list__item-image__wrapper">
                 <img src={imageSrc} alt={title} className="news-list__item-image" />
               </div>
@@ -45,7 +48,7 @@ const NewsBlock = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

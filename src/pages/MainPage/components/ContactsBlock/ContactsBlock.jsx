@@ -1,9 +1,12 @@
 import * as React from 'react';
-import './ContactsBlockStyle.scss';
+import _ from 'lodash';
+//icons
 import Linkedin from '../../../../assets/icons/contacts/linkedin.svg';
 import Instagram from '../../../../assets/icons/contacts/instagram.svg';
 import Telegram from '../../../../assets/icons/contacts/telegram.svg';
 import Attachment from '../../../../assets/icons/contacts/attachment.svg';
+//styles
+import './ContactsBlockStyle.scss';
 
 const social = [
   { title: 'linkedin', imageSrc: Linkedin },
@@ -43,7 +46,7 @@ const ContactsBlock = () => {
           </p>
           <ul className="contacts-list social-list">
             {social.map(({ title, imageSrc }) => (
-              <li className="social-list__item">
+              <li key={_.uniqueId('social_')} className="social-list__item">
                 <span className="visually-hidden">{title}</span>
                 <img className="social-list__item-image" src={imageSrc} alt={title} />
               </li>

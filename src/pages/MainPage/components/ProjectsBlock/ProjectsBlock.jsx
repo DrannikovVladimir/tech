@@ -1,11 +1,14 @@
 import * as React from 'react';
-import './ProjectsBlockStyle.scss';
+//images
 import nftLogo from '../../../../assets/image/projects/nft-logo.png';
+//components
 import Arrow from './components/Arrow/Arrow';
+//styles
+import './ProjectsBlockStyle.scss';
 
 const ProjectsBlock = () => {
   return (
-    <div className="projects">
+    <section className="projects">
       <div className="projects-container">
         <h2 className="projects-title">Our Projects</h2>
         <div className="projects-list__wrapper">
@@ -33,7 +36,7 @@ const ProjectsBlock = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

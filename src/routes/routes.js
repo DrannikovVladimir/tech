@@ -1,20 +1,19 @@
 import * as React from 'react';
 import {
-  BrowserRouter as Router,
   Routes as Switch,
   Route,
 } from 'react-router-dom';
 import MainPage from '../pages/MainPage/MainPage';
+import ProjectsPage from '../pages/ProjectsPage/ProjectsPage';
 import Page404 from '../pages/404Page/404Page';
 
 const Routes = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" element={<MainPage />} />
-        <Route path="*" element={<Page404 />}/>
-      </Switch>
-    </Router>
+    <Switch>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="*" element={<Page404 />}/>
+    </Switch>
   );
 };
 

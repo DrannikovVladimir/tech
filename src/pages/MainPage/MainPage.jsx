@@ -1,6 +1,5 @@
 import * as React from 'react';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
+//components
 import MainBlock from './components/MainBlock/MainBlock';
 import HelpBlock from './components/HelpBlock/HelpBlock';
 import TechstackBlock from './components/TechstackBlock/TechstackBlock';
@@ -10,18 +9,14 @@ import ContactsBlock from './components/ContactsBlock/ContactsBlock';
 
 const MainPage = () => {
   return (
-    <>
-      <Header />
-      <main>
-        <MainBlock />
-        <HelpBlock />
-        <TechstackBlock />
-        <ProjectsBlock />
-        <NewsBlock />
-        <ContactsBlock />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <MainBlock />
+      <HelpBlock />
+      <TechstackBlock />
+      <ProjectsBlock />
+      <NewsBlock />
+      <ContactsBlock />
+    </main>
   );
 };
 

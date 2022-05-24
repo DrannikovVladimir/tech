@@ -1,9 +1,10 @@
 import * as React from 'react';
+//styles
 import './MainBlockStyle.scss';
 
 const MainBlock = () => {
   return (
-    <div className="main">
+    <section className="main">
       <div className="main-container">
         <p className="main-caption">
           <span className="main-bracket__open">{`{ `}</span>
@@ -17,7 +18,7 @@ const MainBlock = () => {
           <button className="main-button__projects"><span className="main-button__projects-text">explore our projects</span></button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
