@@ -1,0 +1,89 @@
+.language {
+  position: relative;
+}
+
+.language-button {
+  min-width: 111px;
+  min-height: 52px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  line-height: 21px;
+  color: #2A303D;
+  font-weight: 700;
+  background-color: #f1f0f0;
+  cursor: pointer;
+}
+
+.language-button__text {
+  position: relative;
+  display: block;
+  padding-right: 33px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-40%);
+    width: 16px;
+    height: 8px;
+    background-image: url('../../../../assets/icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.language-list {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  display: none;
+  min-width: 111px;
+  margin: 0;
+  padding: 12px 32px;
+  border-radius: 20px 20px 0px 0px;
+  list-style: none;
+  background-color: #FFFFFF;
+  z-index: 100;
+}
+
+.language-list__item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #EDEEEF;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.language-list__item--current {
+  color: #F0B270;
+}
+
+.language-list--open {
+  display: block;
+}
+
+@media (max-width: 820px) {
+  .language-button {
+    width: 100%;
+  }
+
+  .language-button__text {
+    display: inline-block;
+  }
+
+  .language-list {
+    width: 100%;
+  }
+
+  .language-list__item {
+    text-align: center;
+  }
+}

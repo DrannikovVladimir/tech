@@ -1,14 +1,14 @@
 import * as React from 'react';
-import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
 import { Link } from 'react-router-dom';
 import cn from 'classnames';
 import ArrowDown from '../icons/ArrowDown';
-import './HeaderStyle.scss';
+//components
 import logo from '../../assets/icons/logo.svg';
 import BlockchainMenu from './components/BlockchainMenu/BlockchainMenu';
 import CompanyMenu from './components/CompanyMenu/CompanyMenu';
-
+import Language from './components/Language/Language';
+//styles
+import './HeaderStyle.scss';
 
 const Header = () => {
   const [language, setLanguage] = React.useState('eng');
@@ -85,16 +85,7 @@ const Header = () => {
               <button className="button-hireus" type="button">Hire us</button>
             </div>
             <div className="language-wrapper">
-              <Select
-                labelId="language"
-                value={language}
-                onChange={handleChange}
-                sx={{ borderColor: "transparent", width: "100%", height: "52px", backgroundColor: "#F9F9F9" }}
-                IconComponent={ArrowDown}
-              >
-                <MenuItem value={'eng'}>Eng</MenuItem>
-                <MenuItem value={'rus'}>Rus</MenuItem>
-              </Select>
+              <Language />
             </div>
           </nav>
         </div>
