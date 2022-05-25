@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useFormik } from 'formik';
+import cn from 'classnames'
 //components
 import FeedbackForm from '../FeedbackForm/FeedbackForm';
 //icons
@@ -23,10 +24,18 @@ const Form = () => {
     onSubmit: (values, actions) => {
       console.log(values);
       actions.resetForm();
+      setIsSubmited(true);
     }
   });
 
-  console.log(isSubmited);
+  const classInputFirstName = cn('form__input', {
+    'form__input--error': !formik.isValid,
+  });
+
+  const classInputLastName = cn('form__input', {
+    'form__input--error': !formik.isValid,
+  });
+
   return (
     <>
       {!isSubmited
@@ -37,7 +46,7 @@ const Form = () => {
                   <label htmlFor="firstName" className="visually-hidden">first name</label>
                   <input
                     type="text"
-                    className="form__input"
+                    className={classInputFirstName}
                     id="firstName"
                     name="firstName"
                     placeholder="First name*"
@@ -49,7 +58,7 @@ const Form = () => {
                   <label htmlFor="lastName" className="visually-hidden">last name</label>
                   <input
                     type="text"
-                    className="form__input"
+                    className={classInputLastName}
                     id="lastName"
                     name="lastName"
                     placeholder="Last name*"
@@ -91,10 +100,16 @@ const Form = () => {
                   </label>
                 </div>
               </div>
+              {formik.touched.firstName && formik.errors.firstName
+                ? <div className="form__error-feedback">{formik.errors.firstName}</div>
+                : null}
+              {formik.touched.lastName && formik.errors.lastName
+                ? <div className="form__error-feedback">{formik.errors.lastName}</div>
+                : null}
               <button className="form-button__submit" type="submit">Send Request</button>
             </form>
         ) : <FeedbackForm />}
-        {isSubmited ? <button type="button" className="form-button__submit" onClick={() => setIsSubmited(false)}>Send another message</button> : null}
+        {isSubmited ? <button type="button" className="form-button__submit" onClick={() => setIsSubmited(false)} disabled={formik.isSubmitting}>Send another message</button> : null}
     </>
   )    
 };
